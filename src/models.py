@@ -72,3 +72,8 @@ class fav_planets(Base):
     user_id = Column(Integer, ForeignKey("user.name"))
     planets_id = Column(Integer, ForeignKey("planet.id"))
     
+def to_dict(self):
+        return {
+            "<User(name, lastname, username)>"
+            "id": self.user_id
+        }
