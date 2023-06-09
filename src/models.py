@@ -23,7 +23,7 @@ class Address(Base):
     street_number = Column(String(250))
     post_code = Column(String(250), nullable=False)
     person_id = Column(Integer, ForeignKey('person.id'))
-    person = relationship(Person)
+    person = relationship(String(250))
 
     def to_dict(self):
         return {}
@@ -53,7 +53,7 @@ class character(Base):
     skin_color = Column(String(250))
     birth_year = Column(String(250))
     gender = Column(String(250))
-    hoeworld = Column(Strin(250))
+    hoeworld = Column(String(250))
 
     def to_dict(self):
         return {}
@@ -70,15 +70,15 @@ class favorites(Base):
 class planets(Base):
     __tablename__ = 'planets'
     id = Column(Integer, primary_key=True)
-    name = Column(String(250), primary_key=False)
-    rotation_period = Column(Integer, nullable=False)
-    orbital_period = Column(Integer, nullable=False)
-    diameter = Column(Integer, primary_key=False)
-    climate = Column(String(250), primary_key=False)
-    gravity = Column(Integer, nullable=False)
-    terrain = Column(String(250), nullable=False)
-    surface_water = Column(Integer)
-    population = Column(Integer)
+    name = Column(String(250))
+    rotation_period = Column(Integer)
+    orbital_period = Column(Integer)
+    diameter = Column(Integer)
+    climate = Column(String(250))
+    gravity = Column(String(250))
+    terrain = Column(String(250))
+    surface_water = Column(String(250))
+    population = Column(String(250))
 
     def to_dict(self):
         return {}
